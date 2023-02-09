@@ -1,0 +1,29 @@
+{
+    "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+    "name": "com_radicalmart",
+    "version": "1.0.0",
+    "description": "E-commerce solution for Joomla! CMS ™",
+    "license": "GPL-3.0-or-later",
+    "assets": [
+        {
+            "name": "plg_radicalmart_media_video.fields.gallery.video",
+            "type": "script",
+            "uri": "plg_radicalmart_media_video/video.min.js",
+            "attributes": {
+                "defer": true,
+                "type": "module"
+            },
+            "version": "auto"
+        },
+		{
+            "name": "plg_radicalmart_media_video.fields.gallery.video-quantum",
+            "type": "script",
+            "uri": "plg_radicalmart_media_video/video-quantum.min.js",
+            "attributes": {
+                "defer": true,
+                "type": "module"
+            },
+            "version": "auto"
+        }
+    ]
+}
