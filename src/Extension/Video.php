@@ -63,7 +63,7 @@ class Video extends CMSPlugin implements SubscriberInterface
 	{
 		parent::__construct($subject, $config);
 
-		Factory::getApplication()->getLanguage()->load('plg_radicalmart_media_video',JPATH_ADMINISTRATOR);
+		Factory::getApplication()->getLanguage()->load('plg_radicalmart_media_video', JPATH_ADMINISTRATOR);
 	}
 
 	/**
@@ -82,20 +82,18 @@ class Video extends CMSPlugin implements SubscriberInterface
 	}
 
 	/**
-	 * Method to change forms.
+	 * Method to change field types.
 	 *
-	 * @param   Event  $event  The event.
+	 * @param   string             $context  Context
+	 * @param   array              $types    Types
+	 * @param   \SimpleXMLElement  $element  element
 	 *
 	 * @throws  \Exception
 	 *
 	 * @since  __DEPLOY_VERSION__
 	 */
-	public function onRadicalMartGetGalleryFieldTypes(Event $event)
+	public function onRadicalMartGetGalleryFieldTypes($context, &$types, $element)
 	{
-		$context = $event->getArgument(0);
-		$types   = $event->getArgument(1);
-		$element = $event->getArgument(2);
-
 		if (isset($types['video']))
 		{
 			return;
@@ -123,26 +121,22 @@ class Video extends CMSPlugin implements SubscriberInterface
 		}
 
 		$types['video'] = $video;
-
-		$event->setArgument(1, $types);
 	}
 
 	/**
-	 * Method to change forms.
+	 * Method to get product gallery types layouts.
 	 *
-	 * @param   Event  $event  The event.
+	 * @param   string     $context   Context
+	 * @param   array      $types     Types
+	 * @param   \stdClass  $product   Product object
+	 * @param   \stdClass  $category  Category object
 	 *
 	 * @throws  \Exception
 	 *
 	 * @since  __DEPLOY_VERSION__
 	 */
-	public function onRadicalMartGetProductGalleryTypes(Event $event)
+	public function onRadicalMartGetProductGalleryTypes($context, &$types, $product, $category)
 	{
-		$context  = $event->getArgument(0);
-		$types    = $event->getArgument(1);
-		$product  = $event->getArgument(2);
-		$category = $event->getArgument(3);
-
 		if (isset($types['video']))
 		{
 			return;
@@ -152,7 +146,5 @@ class Video extends CMSPlugin implements SubscriberInterface
 			'layout_slide'   => 'plugins.radicalmart_media.video.gallery.slide',
 			'layout_preview' => 'plugins.radicalmart_media.video.gallery.preview',
 		];
-
-		$event->setArgument(1, $types);
 	}
 }

@@ -24,6 +24,7 @@ extract($displayData);
  */
 
 ?>
+
 <div class="bg-white h-100 d-flex justify-content-center align-items-center text-center p-1">
 	<video class="mw-100 mh-100 object-fit-contain" src="/<?php echo $item->src; ?>" autoplay loop muted></video>
 </div>
