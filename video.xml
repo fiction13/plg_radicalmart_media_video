@@ -8,10 +8,10 @@
   ~ @link      https://fictionlabs.ru/
   -->
 
-<extension version="3.9" type="plugin" group="radicalmart_media" method="upgrade">
+<extension version="4.2" type="plugin" group="radicalmart_media" method="upgrade">
 	<name>PLG_RADICALMART_MEDIA_VIDEO</name>
     <author>Dmitriy Vasyukov</author>
-    <creationDate>January 2023</creationDate>
+    <creationDate>July 2023</creationDate>
     <authorEmail>info@fictionlabs.ru</authorEmail>
     <authorUrl>https://fictionlabs.ru</authorUrl>
     <copyright>A copyright</copyright>
