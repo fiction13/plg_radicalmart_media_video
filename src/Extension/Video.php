@@ -17,7 +17,6 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\Event\DispatcherInterface;
-use Joomla\Event\Event;
 use Joomla\Event\SubscriberInterface;
 
 class Video extends CMSPlugin implements SubscriberInterface
